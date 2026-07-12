@@ -1,0 +1,13 @@
+name = "FormalisedAlgebra"
+defaultTargets = ["Foundations", "ChapterI"]
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4"
+rev = "v4.31.0"
+
+[[lean_lib]]
+name = "Foundations"
+
+[[lean_lib]]
+name = "ChapterI"
