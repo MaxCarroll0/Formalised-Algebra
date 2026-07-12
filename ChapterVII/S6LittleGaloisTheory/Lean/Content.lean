@@ -1,1 +1,0 @@
--- ChapterVII.S6LittleGaloisTheory: content added on arrival.

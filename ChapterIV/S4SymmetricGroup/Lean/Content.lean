@@ -1,1 +1,0 @@
--- ChapterIV.S4SymmetricGroup: content added on arrival.

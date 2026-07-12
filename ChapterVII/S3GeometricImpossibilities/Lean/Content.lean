@@ -1,1 +1,0 @@
--- ChapterVII.S3GeometricImpossibilities: content added on arrival.

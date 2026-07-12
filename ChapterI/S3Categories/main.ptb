@@ -3,6 +3,8 @@
 \def\PTtemp{0.}\empty
 \def\PTtemp{0.}\empty
 \def\PTtemp{0.}\empty
+\def\PTtemp{0.}\empty
+\def\PTtemp{0.}\empty
 \def\PTtemp{2}\empty
 \def\PTtemp{2.}\empty
 \def\PTtemp{4}\empty
@@ -18,9 +20,9 @@
 \def\PTtemp{10.}\empty
 \def\PTtemp{10}\empty
 \def\PTtemp{10.}\empty
-\def\PTtemp{96I}\empty
-\def\PTtemp{96I.}\empty
-\def\PTtemp{96I}\empty
+\def\PTtemp{106I}\empty
+\def\PTtemp{106I.}\empty
+\def\PTtemp{106I}\empty
 \def\PTtemp{12.}\empty
 \def\PTtemp{0.}\empty
 \def\PTtemp{0.}\empty
@@ -44,6 +46,8 @@
 \def\PTtemp{0.}\empty
 \def\PTtemp{0.}\empty
 \def\PTtemp{0.}\empty
+\def\PTtemp{0.}\empty
+\def\PTtemp{0.}\empty
 \def\PTtemp{2}\empty
 \def\PTtemp{2.}\empty
 \def\PTtemp{4}\empty
@@ -59,9 +63,9 @@
 \def\PTtemp{10.}\empty
 \def\PTtemp{10}\empty
 \def\PTtemp{10.}\empty
-\def\PTtemp{96I}\empty
-\def\PTtemp{96I.}\empty
-\def\PTtemp{96I}\empty
+\def\PTtemp{106I}\empty
+\def\PTtemp{106I.}\empty
+\def\PTtemp{106I}\empty
 \def\PTtemp{12.}\empty
 \def\PTtemp{0.}\empty
 \def\PTtemp{0.}\empty

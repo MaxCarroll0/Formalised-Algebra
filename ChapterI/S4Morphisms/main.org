@@ -1,0 +1,16 @@
+#+TITLE: Aluffi I.4: Morphisms
+#+AUTHOR: Max Carroll
+#+OPTIONS: toc:nil
+#+LATEX_HEADER: \usepackage{fontspec}
+#+LATEX_HEADER: \setmonofont{DejaVu Sans Mono}[Scale=MatchLowercase]
+
+* Exercises
+
+From the book; worked in each language subfolder using only Content.
+Exercises marked =|>= are referred to from the text.
+
+- 4.1 |> composing more than two morphisms
+- 4.2 |> categories from relations, revisited (Example 3.3)
+- 4.3 a morphism with left/right inverses (see book)
+- 4.4 compositions of monomorphisms (and epimorphisms)
+- 4.5 monomorphisms and epimorphisms, concretely

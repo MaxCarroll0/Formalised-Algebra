@@ -1,1 +1,0 @@
--- ChapterII.S3TheCategoryGrp: content added on arrival.

@@ -1,1 +1,0 @@
--- ChapterVI.S7CanonicalForms: content added on arrival.

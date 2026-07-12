@@ -1,1 +1,0 @@
--- ChapterIX.S3ComplexesHomologyAgain: content added on arrival.

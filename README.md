@@ -16,6 +16,6 @@ Per-language Nix flakes, pinned by commit in `.envrc`:
 ```sh
 direnv allow          # first entry downloads the toolchains
 lake exe cache get    # fetch mathlib binaries instead of building them
-make typecheck        # tangle + all four proof checkers
-make doc              # typecheck, then build the literate PDFs
+just typecheck        # tangle + all four proof checkers
+just doc              # typecheck, then build the literate PDFs
 ```

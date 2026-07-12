@@ -1,1 +1,0 @@
--- ChapterVIII.S6ProjectiveInjectiveExt: content added on arrival.

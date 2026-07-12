@@ -1,1 +1,0 @@
--- ChapterVI.S4PresentationsResolutions: content added on arrival.

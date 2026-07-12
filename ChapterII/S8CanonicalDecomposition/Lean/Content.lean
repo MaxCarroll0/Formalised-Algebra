@@ -1,1 +1,0 @@
--- ChapterII.S8CanonicalDecomposition: content added on arrival.

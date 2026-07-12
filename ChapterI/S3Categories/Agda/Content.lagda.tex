@@ -2,14 +2,16 @@
 
 Definition 3.1 as a record: \AgdaField{\_∘\_} takes \(g\) then \(f\) so that
 \(g ∘ f\) reads as the book's \(gf\); the laws are \(1_B f = f\),
-\(f 1_A = f\), and \((hg)f = h(gf)\). \AgdaFunction{one} is the one-object,
-one-morphism category.
+\(f 1_A = f\), and \((hg)f = h(gf)\). Example 3.5: a monoid is a one-object
+category, here \((ℕ, +, 0)\).
 
 \begin{code}
 module ChapterI.S3Categories.Agda.Content where
 
 open import Level using (Level; suc; _⊔_; zero)
 open import Data.Unit using (⊤; tt)
+open import Data.Nat using (ℕ; _+_)
+open import Data.Nat.Properties using (+-assoc; +-identityʳ)
 open import Relation.Binary.PropositionalEquality using (_≡_; refl)
 
 record Category (o h : Level) : Set (suc (o ⊔ h)) where
@@ -23,14 +25,14 @@ record Category (o h : Level) : Set (suc (o ⊔ h)) where
     assoc : {A B C D : Obj} (f : Hom A B) (g : Hom B C) (h : Hom C D) →
             ((h ∘ g) ∘ f) ≡ (h ∘ (g ∘ f))
 
-one : Category zero zero
-one = record
+nat-add : Category zero zero
+nat-add = record
   { Obj   = ⊤
-  ; Hom   = λ _ _ → ⊤
-  ; id    = λ _ → tt
-  ; _∘_   = λ _ _ → tt
-  ; idˡ   = λ _ → refl
-  ; idʳ   = λ _ → refl
-  ; assoc = λ _ _ _ → refl
+  ; Hom   = λ _ _ → ℕ
+  ; id    = λ _ → 0
+  ; _∘_   = _+_
+  ; idˡ   = λ f → refl
+  ; idʳ   = +-identityʳ
+  ; assoc = λ f g h → +-assoc h g f
   }
 \end{code}

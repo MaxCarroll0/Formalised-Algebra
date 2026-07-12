@@ -1,1 +1,0 @@
--- ChapterVI.S3HomsOfFreeModulesII: content added on arrival.

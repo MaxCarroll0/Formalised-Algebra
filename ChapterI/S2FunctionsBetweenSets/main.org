@@ -1,0 +1,22 @@
+#+TITLE: Aluffi I.2: Functions Between Sets
+#+AUTHOR: Max Carroll
+#+OPTIONS: toc:nil
+#+LATEX_HEADER: \usepackage{fontspec}
+#+LATEX_HEADER: \setmonofont{DejaVu Sans Mono}[Scale=MatchLowercase]
+
+* Exercises
+
+From the book; worked in each language subfolder using only Content.
+Exercises marked =|>= are referred to from the text.
+
+- 2.1 |> count the bijections of an n-element set
+- 2.2 |> Proposition 2.1, part (2)
+- 2.3 inverses and compositions of bijections
+- 2.4 |> set-isomorphism is an equivalence relation
+- 2.5 |> epimorphisms and surjections
+- 2.6 functions from the construction of Example 2.4
+- 2.7 (see book)
+- 2.8 canonical decomposition, explicitly
+- 2.9 |> disjoint unions, well-defined up to isomorphism
+- 2.10 |> |B^A| = |B|^|A|
+- 2.11 |> 2^A and the power set

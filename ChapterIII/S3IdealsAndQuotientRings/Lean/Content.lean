@@ -1,1 +1,0 @@
--- ChapterIII.S3IdealsAndQuotientRings: content added on arrival.

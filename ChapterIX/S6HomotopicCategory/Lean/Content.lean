@@ -1,1 +1,0 @@
--- ChapterIX.S6HomotopicCategory: content added on arrival.
