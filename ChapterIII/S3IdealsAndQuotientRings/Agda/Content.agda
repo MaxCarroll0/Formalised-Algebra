@@ -1,0 +1,1 @@
+module ChapterIII.S3IdealsAndQuotientRings.Agda.Content where

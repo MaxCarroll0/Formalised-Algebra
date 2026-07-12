@@ -1,0 +1,3 @@
+module ChapterVII.S3GeometricImpossibilities.Agda.Exercises where
+
+open import ChapterVII.S3GeometricImpossibilities.Agda.Content

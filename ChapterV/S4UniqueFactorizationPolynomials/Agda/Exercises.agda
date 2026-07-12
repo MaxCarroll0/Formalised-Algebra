@@ -1,0 +1,3 @@
+module ChapterV.S4UniqueFactorizationPolynomials.Agda.Exercises where
+
+open import ChapterV.S4UniqueFactorizationPolynomials.Agda.Content

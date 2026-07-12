@@ -1,0 +1,1 @@
+-- ChapterVII.S2AlgebraicClosureNullstellensatz: content added on arrival.

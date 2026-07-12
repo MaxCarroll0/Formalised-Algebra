@@ -1,0 +1,3 @@
+module ChapterV.S5IrreducibilityOfPolynomials.Agda.Exercises where
+
+open import ChapterV.S5IrreducibilityOfPolynomials.Agda.Content

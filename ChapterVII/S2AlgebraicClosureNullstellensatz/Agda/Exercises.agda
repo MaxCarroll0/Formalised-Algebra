@@ -1,0 +1,3 @@
+module ChapterVII.S2AlgebraicClosureNullstellensatz.Agda.Exercises where
+
+open import ChapterVII.S2AlgebraicClosureNullstellensatz.Agda.Content

@@ -1,0 +1,1 @@
+module ChapterV.S6FurtherRemarksExamples.Agda.Content where

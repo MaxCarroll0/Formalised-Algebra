@@ -1,0 +1,1 @@
+module ChapterIX.S9FurtherConsiderations.Agda.Content where

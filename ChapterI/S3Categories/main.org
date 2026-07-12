@@ -8,89 +8,99 @@
 
 * Categories
 
-A category consists of objects and morphisms, with an associative
-composition law admitting identities. The prototypical picture is a
-commuting square:
+Definition 3.1: a category has objects and, for each pair of objects
+\(A, B\), a set \(\mathrm{Hom}(A,B)\) of morphisms, with identities
+\(1_A \in \mathrm{Hom}(A,A)\) and a composition
+\(\mathrm{Hom}(A,B) \times \mathrm{Hom}(B,C) \to \mathrm{Hom}(A,C)\),
+written \((f,g) \mapsto gf\), satisfying \(f 1_A = f\), \(1_B f = f\), and
+\((hg)f = h(gf)\); distinct pairs of objects have disjoint morphism sets.
+In the typed formalisations below disjointness is automatic, since
+\(\mathrm{Hom}(A,B)\) are distinct types. The commuting square:
 
 #+begin_export latex
 \[\begin{tikzcd}
-  W \arrow[r, "f"] \arrow[d, "g"'] & X \arrow[d, "h"] \\
-  Y \arrow[r, "k"']                & Z
+  A \arrow[r, "f"] \arrow[d, "g"'] & B \arrow[d, "h"] \\
+  C \arrow[r, "k"']                & D
 \end{tikzcd}\]
 #+end_export
 
 * Lean
 
-The bare definition, mathlib-free; ~one~ is the terminal category with a
-single object and only its identity.
+The definition as stated in the book, with ~comp f g~ denoting \(gf\);
+~one~ is the category with a single object and only its identity.
 
-#+begin_src lean4 :tangle Categories.lean
+#+begin_src lean4 :tangle Lean/Content.lean
 universe u v
 
-structure SmallCategory where
+structure Category where
   Obj : Type u
   Hom : Obj → Obj → Type v
-  id : (X : Obj) → Hom X X
-  comp : {X Y Z : Obj} → Hom X Y → Hom Y Z → Hom X Z
-  id_comp : ∀ {X Y : Obj} (f : Hom X Y), comp (id X) f = f
-  comp_id : ∀ {X Y : Obj} (f : Hom X Y), comp f (id Y) = f
-  assoc : ∀ {W X Y Z : Obj} (f : Hom W X) (g : Hom X Y) (h : Hom Y Z),
-    comp (comp f g) h = comp f (comp g h)
+  id : (A : Obj) → Hom A A
+  comp : {A B C : Obj} → Hom A B → Hom B C → Hom A C
+  id_right : ∀ {A B : Obj} (f : Hom A B), comp (id A) f = f
+  id_left : ∀ {A B : Obj} (f : Hom A B), comp f (id B) = f
+  assoc : ∀ {A B C D : Obj} (f : Hom A B) (g : Hom B C) (h : Hom C D),
+    comp f (comp g h) = comp (comp f g) h
 
-def one : SmallCategory where
+def one : Category where
   Obj := PUnit
   Hom _ _ := PUnit
   id _ := ⟨⟩
   comp _ _ := ⟨⟩
-  id_comp _ := rfl
-  comp_id _ := rfl
+  id_right _ := rfl
+  id_left _ := rfl
   assoc _ _ _ := rfl
 #+end_src
 
 * F*
 
-Following Aluffi's Example 3.5: a monoid is a one-object category, so the
-data collapses to an operation, a unit, and the axioms as squashed
-propositions discharged by the SMT solver.
+The same definition with the laws as squashed propositions, followed by
+Example 3.5: a monoid, here \((\mathbb{N}, +, 0)\), is a one-object
+category.
 
-#+begin_src fstar :tangle Categories.fst
-module Categories
+#+begin_src fstar :tangle FStar/Content.fst
+module Content
 
-noeq type one_object_category (a: Type) = {
-  op: a -> a -> a;
-  unit: a;
-  assoc: squash (forall (f g h: a). op (op f g) h == op f (op g h));
-  left_unit: squash (forall (f: a). op unit f == f);
-  right_unit: squash (forall (f: a). op f unit == f);
+noeq type category = {
+  obj: Type;
+  hom: obj -> obj -> Type;
+  id: (a: obj) -> hom a a;
+  comp: (#a: obj) -> (#b: obj) -> (#c: obj) -> hom a b -> hom b c -> hom a c;
+  id_right: squash (forall (a b: obj) (f: hom a b). comp (id a) f == f);
+  id_left: squash (forall (a b: obj) (f: hom a b). comp f (id b) == f);
+  assoc: squash (forall (a b c d: obj) (f: hom a b) (g: hom b c) (h: hom c d).
+    comp f (comp g h) == comp (comp f g) h);
 }
 
-let nat_add : one_object_category nat = {
-  op = (fun (x y: nat) -> x + y);
-  unit = 0;
+let nat_add : category = {
+  obj = unit;
+  hom = (fun _ _ -> nat);
+  id = (fun _ -> 0);
+  comp = (fun #_ #_ #_ f g -> f + g);
+  id_right = ();
+  id_left = ();
   assoc = ();
-  left_unit = ();
-  right_unit = ();
 }
-
-let unit_unique (#a: Type) (c: one_object_category a) (e: a)
-    (pf: squash (forall (f: a). c.op e f == f))
-  : Lemma (e == c.unit)
-  = ()
 #+end_src
 
 * Agda
 
-The Agda development lives in [[file:Categories.lagda.tex][Categories.lagda.tex]] (native literate
+The Agda development lives in [[file:Agda/Content.lagda.tex][Agda/Content.lagda.tex]] (native literate
 Agda); its typeset form is included below when built with ~doc-org~.
 
 #+begin_export latex
-\IfFileExists{latex/ChapterI/S3Categories/Categories.tex}{%
-  \input{latex/ChapterI/S3Categories/Categories.tex}}{%
+\IfFileExists{Agda/latex/ChapterI/S3Categories/Agda/Content.tex}{%
+  \input{Agda/latex/ChapterI/S3Categories/Agda/Content.tex}}{%
   \emph{Run doc-agda first to generate the typeset Agda.}}
 #+end_export
 
 * Isabelle
 
-The Isabelle theory is [[file:Categories.thy][Categories.thy]]; its PDF is produced separately by
-Isabelle document preparation (~doc-isabelle~, output under
-~ChapterI/output/~).
+The Isabelle theory is [[file:Isabelle/Content.thy][Isabelle/Content.thy]]; its PDF is produced
+separately by Isabelle document preparation (~doc-isabelle~, output under
+~Isabelle/output/~).
+
+* Exercises
+
+Worked in the ~Exercises~ file of each language subfolder, using only the
+definitions above.

@@ -1,0 +1,1 @@
+module ChapterIV.S3CompositionSeriesSolvability.Agda.Content where

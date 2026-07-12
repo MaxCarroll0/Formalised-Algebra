@@ -1,0 +1,1 @@
+module ChapterVIII.S6ProjectiveInjectiveExt.Agda.Content where

@@ -1,0 +1,1 @@
+module ChapterV.S4UniqueFactorizationPolynomials.Agda.Content where

@@ -1,0 +1,1 @@
+module ChapterVI.S4PresentationsResolutions.Agda.Content where

@@ -1,0 +1,1 @@
+module ChapterV.S1ChainConditionsFactorization.Agda.Content where

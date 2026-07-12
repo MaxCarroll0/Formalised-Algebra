@@ -1,0 +1,1 @@
+-- ChapterIII.S2TheCategoryRing: content added on arrival.

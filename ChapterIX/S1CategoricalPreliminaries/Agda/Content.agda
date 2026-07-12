@@ -1,0 +1,1 @@
+module ChapterIX.S1CategoricalPreliminaries.Agda.Content where

@@ -1,1 +1,10 @@
-import ChapterI.S3Categories.Categories
+import ChapterI.S1NaiveSetTheory.Lean.Content
+import ChapterI.S1NaiveSetTheory.Lean.Exercises
+import ChapterI.S2FunctionsBetweenSets.Lean.Content
+import ChapterI.S2FunctionsBetweenSets.Lean.Exercises
+import ChapterI.S3Categories.Lean.Content
+import ChapterI.S3Categories.Lean.Exercises
+import ChapterI.S4Morphisms.Lean.Content
+import ChapterI.S4Morphisms.Lean.Exercises
+import ChapterI.S5UniversalProperties.Lean.Content
+import ChapterI.S5UniversalProperties.Lean.Exercises

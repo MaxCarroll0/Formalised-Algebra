@@ -1,0 +1,3 @@
+module ChapterIV.S3CompositionSeriesSolvability.Agda.Exercises where
+
+open import ChapterIV.S3CompositionSeriesSolvability.Agda.Content

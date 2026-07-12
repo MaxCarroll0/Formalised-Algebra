@@ -1,0 +1,3 @@
+module Content
+
+// Aluffi I.2 (S2FunctionsBetweenSets): definitions written while reading.

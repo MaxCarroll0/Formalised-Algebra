@@ -1,0 +1,1 @@
+module ChapterIX.S5LongExactCohomologySequence.Agda.Content where

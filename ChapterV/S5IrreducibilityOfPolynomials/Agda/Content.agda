@@ -1,0 +1,1 @@
+module ChapterV.S5IrreducibilityOfPolynomials.Agda.Content where

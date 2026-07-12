@@ -1,0 +1,1 @@
+module ChapterIX.S2WorkingInAbelianCategories.Agda.Content where

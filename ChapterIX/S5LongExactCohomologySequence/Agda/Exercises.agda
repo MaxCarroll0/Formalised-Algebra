@@ -1,0 +1,3 @@
+module ChapterIX.S5LongExactCohomologySequence.Agda.Exercises where
+
+open import ChapterIX.S5LongExactCohomologySequence.Agda.Content

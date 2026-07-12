@@ -1,0 +1,1 @@
+module ChapterVII.S2AlgebraicClosureNullstellensatz.Agda.Content where

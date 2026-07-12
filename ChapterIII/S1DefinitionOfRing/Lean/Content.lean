@@ -1,0 +1,1 @@
+-- ChapterIII.S1DefinitionOfRing: content added on arrival.

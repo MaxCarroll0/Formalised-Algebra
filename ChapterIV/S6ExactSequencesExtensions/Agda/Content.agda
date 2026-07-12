@@ -1,0 +1,1 @@
+module ChapterIV.S6ExactSequencesExtensions.Agda.Content where

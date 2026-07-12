@@ -1,0 +1,1 @@
+module ChapterIII.S4IdealsRemarksExamples.Agda.Content where

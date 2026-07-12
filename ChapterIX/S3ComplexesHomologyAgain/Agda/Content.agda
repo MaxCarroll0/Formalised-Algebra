@@ -1,0 +1,1 @@
+module ChapterIX.S3ComplexesHomologyAgain.Agda.Content where

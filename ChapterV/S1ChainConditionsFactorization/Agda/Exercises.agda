@@ -1,0 +1,3 @@
+module ChapterV.S1ChainConditionsFactorization.Agda.Exercises where
+
+open import ChapterV.S1ChainConditionsFactorization.Agda.Content

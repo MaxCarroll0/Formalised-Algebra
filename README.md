@@ -4,9 +4,9 @@ Working through Paolo Aluffi's *Algebra: Chapter 0* (2nd printing), formalising 
 
 ## Layout
 
-- `ChapterI/` … `ChapterIX/` mirror the book; each section is a directory (e.g. `ChapterI/S3Categories/`) holding the four formalisations side by side.
-- `Foundations/` collects foundational material built up along the way.
-- Each section is a literate document: `main.org` (prose, tikz-cd diagrams, Lean and F* src blocks that tangle to `.lean`/`.fst`), `*.lagda.tex` (literate Agda), and `.thy` typeset via Isabelle document preparation.
+- `ChapterI/` … `ChapterIX/` mirror the book; each section directory (e.g. `ChapterI/S3Categories/`) has `Lean/ Agda/ Isabelle/ FStar/` subfolders, each holding `Content.*` (definitions written while reading) and `Exercises.*` (the book's exercises, worked using only Content).
+- `Foundations/` collects foundational material built up along the way, in the same language split.
+- Each section is a literate document: `main.org` (prose, tikz-cd diagrams; its Lean and F* src blocks tangle to the Content files), `Agda/Content.lagda.tex` (literate Agda), and `Isabelle/Content.thy` typeset via Isabelle document preparation (one session per section).
 
 ## Environment
 

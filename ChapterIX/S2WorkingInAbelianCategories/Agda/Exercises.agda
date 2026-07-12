@@ -1,0 +1,3 @@
+module ChapterIX.S2WorkingInAbelianCategories.Agda.Exercises where
+
+open import ChapterIX.S2WorkingInAbelianCategories.Agda.Content

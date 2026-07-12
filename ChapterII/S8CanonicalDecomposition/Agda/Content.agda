@@ -1,0 +1,1 @@
+module ChapterII.S8CanonicalDecomposition.Agda.Content where
